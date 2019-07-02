@@ -9,11 +9,11 @@ vim .bashrc
 
 2. Add the following the following variables (I usually put in the end of the file)
 ```
-export HTTP_PROXY="http://proxy.server:port/"
-export http_proxy="http://proxy.server:port/"
-export HTTPS_PROXY="http://proxy.server:port/"
-export https_proxy="http://proxy.server:port/"
-export ftp_proxy="http://proxy.server:port/"
+export HTTP_PROXY="http://user:password@proxy.server:port/"
+export http_proxy="http://user:password@proxy.server:port/"
+export HTTPS_PROXY="http://user:password@proxy.server:port/"
+export https_proxy="http://user:password@proxy.server:port/"
+export ftp_proxy="http://user:password@proxy.server:port/"
 export HTTP_PROXY_REQUEST_FULLURI=0
 export HTTPS_PROXY_REQUEST_FULLURI=0
 ```
@@ -27,7 +27,7 @@ sudo vim /etc/apt/apt.conf.d/proxy.conf
 ```
 
 2. Add the following text (Choose a or b way):  
-  a)
+a)
 ```
 Acquire::http::Proxy "http://user:password@proxy.server:port/";
 Acquire::https::Proxy "http://user:password@proxy.server:port/";
@@ -36,8 +36,8 @@ Acquire::https::Proxy "http://user:password@proxy.server:port/";
   b)
 ```
 Acquire {
-  HTTP::proxy "http://proxy.server:port/";
-  HTTPS::proxy "http://proxy.server:port/";
+  HTTP::proxy "http://user:password@proxy.server:port/";
+  HTTPS::proxy "http://user:password@proxy.server:port/";
 }
 ```
 
@@ -49,9 +49,9 @@ sudo vim /etc/wgetrc
 
 2. Uncomment and add the proxy URL:PORT
 ```
-https_proxy = http://proxy.server:port/
-http_proxy = http://proxy.server:port/
-ftp_proxy = http://proxy.server:port/
+https_proxy = http://user:password@proxy.server:port/
+http_proxy = http://user:password@proxy.server:port/
+ftp_proxy = http://user:password@proxy.server:port/
 use_proxy = on
 ```
 
