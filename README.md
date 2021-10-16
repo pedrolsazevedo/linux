@@ -12,3 +12,18 @@ Configuration can be found in [Proxy](/PROXY.MD)
 Some changes that I've done, like Alias and VIM Configuration
 
 See [Personal Conf](/PERSONAL_CONF.MD)
+
+## Basic commands reminder
+
+1. Delete `.DS_Store` file
+  ```bash
+  find . -name '.DS_Store' -type f -delete
+  ```
+2. Delete `__MACOSX` folder
+  ```bash
+  find . -name __MACOSX -exec rm -rf {} \;
+  ```
+3. List all available packages Yum
+  ```bash
+  yum --showduplicates list PACKAGENAME
+  ```
