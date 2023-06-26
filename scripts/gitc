@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# List of configurations
+configurations=(
+  "John Doe|john@example.com"
+  "Jane Smith|jane@example.com"
+  "Mike Johnson|mike@example.com"
+  # Add more configurations here
+)
+
+# Display the available configurations
+echo "Available Configurations:"
+for ((i=0; i<${#configurations[@]}; i++)); do
+  echo "$i. ${configurations[$i]}"
+done
+
+# Prompt user to select a configuration
+ "Enter the number corresponding to the desired configuration: " selection
+
+# Validate user input
+if ! [[ $selection =~ ^[0-9]+$ ]] || (( selection < 0 || selection >= ${#configurations[@]} )); then
+  echo "Invalid selection. Please enter a valid number."
+  exit 1
+fi
+
+# Extract the username and email from the selected configuration
+selected_config=${configurations[$selection]}
+IFS='|' read -r -a config_parts <<< "$selected_config"
+username=${config_parts[0]}
+email=${config_parts[1]}
+
+# Set the Git username and email
+git config --global user.name "$username"
+git config --global user.email "$email"
+
+echo "Git config updated:"
+echo "Username: $username"
+echo "Email: $email"

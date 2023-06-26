@@ -1,5 +1,5 @@
 # LinuxDaily
-Basic commands that use (or used)  to solve a situation or as initial config for a new instance that I gonna work.
+Basic commands that I use (or used)  to solve a situation or as initial config for a new instance that I gonna work.
 
 ## Proxy
 At work we got a proxy running, to help manage the user/password I use CNTLM. This way everytime that I change my password I only need to change in one place.
@@ -12,6 +12,13 @@ Configuration can be found in [Proxy](/PROXY.MD)
 Some changes that I've done, like Alias and VIM Configuration
 
 See [Personal Conf](/PERSONAL_CONF.MD)
+
+## Scripts
+
+1. gitc, allows the user to change Name and email for git commit.
+  ```
+   cp gitc /usr/local/bin/gitc
+  ```
 
 ## Basic commands reminder
 

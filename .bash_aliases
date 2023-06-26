@@ -31,6 +31,8 @@ alias fcow='fortune | cowsay'
 ## Weather
 alias wttr='curl http://wttr.in/Eloy+Chaves'
 
+alias lf='ls -aiLlhH'
+
 ## Small reminder for the commands
 echo "Aliases:"
 echo "envarm azvars, cdate, cip, lf, tflint, tfdocs, fsize \$folder, spnvl, upip3, ofdisk, fcow, wttr"

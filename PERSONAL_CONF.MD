@@ -1,15 +1,13 @@
 ## Alias
 
 
-1. Edit **`.bashrc`**
+1. Edit **`.bash_aliases`**
 ```bash
-vim .bashrc
+vim .bash_aliases
 ```
 
-2. Add the  following text
-```
-alias lf='ls -aiLlhH'
-```
+2. Add the contents of .bash_aliases
+
 
 **Notes:**
 
